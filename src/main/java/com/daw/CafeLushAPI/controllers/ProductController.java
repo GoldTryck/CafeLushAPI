@@ -1,6 +1,5 @@
 package com.daw.CafeLushAPI.controllers;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import com.daw.CafeLushAPI.dtos.request.ProductRequest;
 import com.daw.CafeLushAPI.dtos.response.ProductResponse;
@@ -23,5 +22,14 @@ public class ProductController {
     public ResponseEntity<List<ProductResponse>> getAllProducts(){
         return ResponseEntity.ok(productService.findAll());
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<ProductResponse> getProductById(@PathVariable Long id){
+        return ResponseEntity.ok(productService.findById(id));
+    }
+    @PostMapping
+    public ResponseEntity<ProductResponse> createProduct(@Valid @RequestBody ProductRequest productRequest){
+        return ResponseEntity.status(HttpStatus.CREATED).body(productService.create(productRequest));
+    }
+
 
 }

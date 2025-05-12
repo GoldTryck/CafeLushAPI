@@ -1,0 +1,19 @@
+meta {
+  name: Product_create_fail
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{URL}}/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "product03",
+    "description": "product03 description",
+    "price": 250.00
+  }
+}

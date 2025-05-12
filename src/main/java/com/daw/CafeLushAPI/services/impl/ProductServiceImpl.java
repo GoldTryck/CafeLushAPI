@@ -34,7 +34,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public List<ProductResponse> findAll() {
-        return List.of();
+        return productRepository.findAll()
+                .stream()
+                .map(product -> modelMapper.map(product, ProductResponse.class))
+                .toList();
     }
 
     @Override

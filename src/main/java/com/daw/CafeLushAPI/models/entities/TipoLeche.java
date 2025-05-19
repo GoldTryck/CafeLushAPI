@@ -10,25 +10,22 @@ import jakarta.validation.constraints.Size;
 import java.util.List;
 
 @Entity
-@Table(name = "Categoria")
+@Table(name = "TipoLeche")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Categoria {
+public class TipoLeche {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cat_id")
+    @Column(name = "lec_id")
     private Integer id;
 
-    @NotBlank(message = "El nombre es requerido")
-    @Size(max = 45, message = "El nombre debe tener máximo 45 caracteres")
-    @Column(name = "cat_nombre", nullable = false)
-    private String nombre;
+    @NotBlank(message = "El tipo es requerido")
+    @Size(max = 45, message = "El tipo debe tener máximo 45 caracteres")
+    @Column(name = "lec_tipo", nullable = false, unique = true)
+    private String tipo;
 
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
-    private List<Subcategoria> subcategorias;
-}
-
-
-
+    @OneToMany(mappedBy = "tipoLeche", cascade = CascadeType.ALL)
+    private List<BebidaCustom> bebidasCustom;
+} 

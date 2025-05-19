@@ -6,29 +6,32 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
-@Table(name = "Categoria")
+@Table(name = "TamanoBebida")
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Categoria {
+public class TamanoBebida {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cat_id")
+    @Column(name = "tam_id")
     private Integer id;
 
     @NotBlank(message = "El nombre es requerido")
     @Size(max = 45, message = "El nombre debe tener máximo 45 caracteres")
-    @Column(name = "cat_nombre", nullable = false)
+    @Column(name = "tam_nombre", nullable = false, unique = true)
     private String nombre;
 
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
-    private List<Subcategoria> subcategorias;
-}
+    @NotNull(message = "El factor de precio es requerido")
+    @Column(name = "tam_fact_precio", nullable = false, precision = 10, scale = 2)
+    private BigDecimal factorPrecio;
 
-
-
+    @OneToMany(mappedBy = "tamanoBebida", cascade = CascadeType.ALL)
+    private List<BebidaCustom> bebidasCustom;
+} 

@@ -30,11 +30,11 @@ public class Alimento {
     private String nombre;
 
     @NotBlank(message = "La descripción es requerida")
-    @Size(max = 45, message = "La descripción debe tener máximo 45 caracteres")
+    @Size(max = 245, message = "La descripción debe tener máximo 45 caracteres")
     @Column(name = "alim_descripcion", nullable = false)
     private String descripcion;
 
-    @Size(max = 45, message = "La imagen debe tener máximo 45 caracteres")
+    @Size(max = 455, message = "La imagen debe tener máximo 455 caracteres")
     @Column(name = "alim_imagen")
     private String imagen;
 

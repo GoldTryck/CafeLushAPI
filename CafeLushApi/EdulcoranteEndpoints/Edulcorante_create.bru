@@ -1,0 +1,17 @@
+meta {
+  name: Edulcorante_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/edulcorantes
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "tipo": "Stevia"
+  }
+}

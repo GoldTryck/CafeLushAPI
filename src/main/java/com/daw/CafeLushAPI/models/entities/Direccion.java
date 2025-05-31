@@ -28,7 +28,7 @@ public class Direccion {
     private Cliente cliente;
 
     @Column(name = "dir_es_principal", nullable = false)
-    @Enumerated(EnumType.STRING)
+    @NotBlank(message = "El campo esPrincipal es requerido")
     private Boolean esPrincipal;
 
     @NotBlank(message = "El número es requerido")

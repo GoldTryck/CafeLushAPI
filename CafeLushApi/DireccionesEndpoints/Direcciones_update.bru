@@ -1,0 +1,23 @@
+meta {
+  name: Direcciones_update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL}}/direcciones/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clienteId": 3,
+    "esPrincipal": false,
+    "numero": "789",
+    "interior": "C",
+    "colonia": "Nueva Esperanza",
+    "codigoPostal": "54321"
+  }
+  
+}

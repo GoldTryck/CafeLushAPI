@@ -6,6 +6,18 @@ meta {
 
 put {
   url: {{URL}}/clientes/2
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "nombre": "Name Updated",
+    "primerApellido": "Doe",
+    "segundoApellido": "Doe",
+    "email": "name.updated@example.com",
+    "password": "nuevaPassword123",
+    "telefono": "5599887766"
+  }
+  
 }

@@ -1,0 +1,18 @@
+meta {
+  name: Categoria_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/categorias
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Sandwiches"
+  }
+  
+}

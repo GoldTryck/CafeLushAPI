@@ -6,6 +6,12 @@ meta {
 
 put {
   url: {{URL}}/categorias/1
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "nombre": "Panaderia"
+  }
 }

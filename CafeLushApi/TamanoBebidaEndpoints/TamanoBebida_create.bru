@@ -1,0 +1,19 @@
+meta {
+  name: TamanoBebida_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/tamano-bebidas
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Mediano",
+    "factorPrecio": 1.50
+  }
+  
+}

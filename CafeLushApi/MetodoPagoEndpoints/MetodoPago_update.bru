@@ -1,0 +1,22 @@
+meta {
+  name: MetodoPago_update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL}}/metodos-pago/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clienteId": 3,
+    "numero": "1234567812345000",
+    "mesExpiracion": "12",
+    "anioExpiracion": "26",
+    "cvv": "123"
+  }
+  
+}

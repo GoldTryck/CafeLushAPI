@@ -5,7 +5,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class EdulcoranteDTO {
+public class ComplementoDTO {
     private Integer id;
     private String tipo;
 }

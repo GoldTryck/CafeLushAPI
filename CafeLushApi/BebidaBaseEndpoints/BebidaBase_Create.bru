@@ -1,0 +1,19 @@
+meta {
+  name: BebidaBase_Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/bebidas-base
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Café Americano",
+    "tipo": "C",
+    "precio": 25.50
+  }
+}

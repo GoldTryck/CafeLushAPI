@@ -4,8 +4,18 @@ meta {
   seq: 1
 }
 
-put {
-  url: {{URL}}/register
-  body: none
+post {
+  url: {{URL}}/auth/register
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "nombre" : "nothing", 
+    "primerApellido": "else", 
+    "segundoApellido": null,
+    "email": "somesdsfdone@example.com",
+    "password": "qwerty12345"
+  }
 }

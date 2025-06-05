@@ -6,6 +6,13 @@ meta {
 
 post {
   url: {{URL}}/auth/login
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "email": "Random.one@example.com",
+    "password": "Qa654321"
+  }
 }

@@ -56,7 +56,7 @@ public class AuthServiceImpl implements AuthService {
 
         Usuario usuarioGuardado = usuarioRepository.save(usuario);
 
-        Cliente cliente = Cliente.builder()
+         Cliente cliente = Cliente.builder()
                 .usuario(usuarioGuardado)
                 .telefono(request.getTelefono())
                 .build();

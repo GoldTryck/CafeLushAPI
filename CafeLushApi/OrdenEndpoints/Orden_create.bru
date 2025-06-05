@@ -6,6 +6,24 @@ meta {
 
 post {
   url: {{URL}}/ordenes
-  body: none
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "clienteId": 3,
+    "metodoPagoId": 1,
+    "direccionId": 1,
+    "nota": "Por favor sin azúcar",
+    "alimentos": [
+      { "alimentoId": 1, "cantidad": 2 },
+      { "alimentoId": 2, "cantidad": 1 }
+    ],
+    "bebidas": [
+      { "bebidaCustomId": 2, "cantidad": 1 },
+      { "bebidaCustomId": 1, "cantidad": 2 }
+    ]
+  }
+  
 }

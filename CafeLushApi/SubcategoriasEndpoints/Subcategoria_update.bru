@@ -1,0 +1,19 @@
+meta {
+  name: Subcategoria_update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL}}/subcategorias/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Pasteles",
+    "categoriaId": 3
+  }
+  
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Categoria_update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{URL}}/categorias/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Panaderia"
+  }
+}

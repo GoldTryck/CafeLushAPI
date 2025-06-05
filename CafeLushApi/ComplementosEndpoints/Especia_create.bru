@@ -1,0 +1,17 @@
+meta {
+  name: Especia_create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{URL}}/especias
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "tipo": "especia1"
+  }
+}

@@ -1,0 +1,22 @@
+meta {
+  name: BebidaCustom_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/bebidas-custom
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "bebidaBaseId": 1,
+    "tamanoBebidaId": 2,
+    "edulcoranteId": null,
+    "tipoLecheId": null,
+    "especiaId": null,
+    "cremaEspumaId": null
+  }
+}

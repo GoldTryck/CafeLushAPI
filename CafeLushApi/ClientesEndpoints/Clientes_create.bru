@@ -1,0 +1,22 @@
+meta {
+  name: Clientes_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/clientes
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Albert",
+    "primerApellido": "Doe",
+    "email": "albert.doe@example.com",
+    "password": "myfpassword",
+    "telefono": "551234522678"
+  }
+  
+}

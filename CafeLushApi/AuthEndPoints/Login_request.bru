@@ -1,0 +1,18 @@
+meta {
+  name: Login_request
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{URL}}/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "Random.one@example.com",
+    "password": "Qa654321"
+  }
+}

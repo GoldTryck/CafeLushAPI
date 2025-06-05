@@ -1,5 +1,6 @@
 package com.daw.CafeLushAPI.models.entities;
 
+import com.daw.CafeLushAPI.models.Complemento;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,7 +16,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Edulcorante {
+public class Edulcorante implements Complemento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "edl_id")

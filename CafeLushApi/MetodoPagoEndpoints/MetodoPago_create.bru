@@ -1,0 +1,22 @@
+meta {
+  name: MetodoPago_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/metodos-pago
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "clienteId": 3,
+    "numero": "1234567812345678",
+    "mesExpiracion": "12",
+    "anioExpiracion": "26",
+    "cvv": "123"
+  }
+  
+}

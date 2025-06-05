@@ -1,6 +1,7 @@
 package com.daw.CafeLushAPI.models.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,7 +29,7 @@ public class Direccion {
     private Cliente cliente;
 
     @Column(name = "dir_es_principal", nullable = false)
-    @NotBlank(message = "El campo esPrincipal es requerido")
+    @NotNull(message = "El campo esPrincipal es requerido")
     private Boolean esPrincipal;
 
     @NotBlank(message = "El número es requerido")

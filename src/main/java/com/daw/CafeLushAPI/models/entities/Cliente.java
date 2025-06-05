@@ -25,9 +25,8 @@ public class Cliente {
     @JoinColumn(name = "cli_usr_id")
     private Usuario usuario;
 
-    @NotBlank(message = "El teléfono es requerido")
     @Size(max = 20, message = "El teléfono debe tener máximo 20 caracteres")
-    @Column(name = "cli_telefono", nullable = false, unique = true)
+    @Column(name = "cli_telefono")
     private String telefono;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)

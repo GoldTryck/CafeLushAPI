@@ -1,0 +1,17 @@
+meta {
+  name: TipoLeche_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/tipo-leche
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "tipo": "Almendras"
+  }
+}

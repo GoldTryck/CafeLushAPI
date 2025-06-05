@@ -1,0 +1,21 @@
+meta {
+  name: Register_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/auth/register
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre" : "nothing", 
+    "primerApellido": "else", 
+    "segundoApellido": null,
+    "email": "somesdsfdone@example.com",
+    "password": "qwerty12345"
+  }
+}

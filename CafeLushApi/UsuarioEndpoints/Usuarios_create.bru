@@ -1,0 +1,22 @@
+meta {
+  name: Usuarios_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/usuarios
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nombre": "Ana",
+    "primerApellido": "López",
+    "segundoApellido": "Martínez",
+    "email": "ana.lopez@example.com",
+    "password": "claveSegura123"
+  }
+  
+}
